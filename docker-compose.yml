@@ -1,0 +1,7 @@
+services:
+  clearbox-site:
+    build: .
+    container_name: clearbox-site
+    restart: unless-stopped
+    ports:
+      - "8081:80"
