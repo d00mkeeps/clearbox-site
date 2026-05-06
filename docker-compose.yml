@@ -4,4 +4,4 @@ services:
     container_name: clearbox-site
     restart: unless-stopped
     ports:
-      - "8081:80"
+      - "8082:80"
