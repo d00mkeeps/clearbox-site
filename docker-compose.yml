@@ -5,3 +5,9 @@ services:
     restart: unless-stopped
     ports:
       - "8082:80"
+    networks:
+      - medicine-network
+
+networks:
+  medicine-network:
+    external: true
