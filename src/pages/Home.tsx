@@ -637,7 +637,7 @@ export default function Home() {
       <section style={{ marginBottom: '2.5rem' }}>
         <h2 style={{ fontSize: '1.5rem', marginTop: '2rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>Problem</h2>
         <p style={{ color: 'var(--text-secondary)' }}>
-          Three months ago, a close relative told me she had an app idea. Turns out, there were some issues with the app she'd been using to track her medicines. It was cumbersome to add new medicines, basic mechanisms in the app didn't work (time zone handling, for example) and it had started asking for a monthly subscription!
+          Three months ago, a close relative told me there were some issues with the app she'd been using to track her medicines. It was cumbersome to add new medicines, basic mechanisms in the app didn't work (time zone handling, for example) and it had started asking for a monthly subscription!
         </p>
         <p style={{ color: 'var(--text-secondary)' }}>
           Refusing to pay the subscription, she'd spent the last few months using a piece of paper to keep track of nearly a dozen different medicines. Hearing this, I decided to do some digging to better understand the problem.
