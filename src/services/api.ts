@@ -72,3 +72,24 @@ export async function postTelemetry(payload: object): Promise<{ id: string }> {
   if (!res.ok) throw new Error(`postTelemetry ${res.status}`);
   return res.json() as Promise<{ id: string }>;
 }
+
+// ─── Dashboard Analytics (Auth Required) ─────────────────────────────────────
+
+import type { DashboardMetricsResponse } from '../types/analytics';
+
+export async function fetchDashboardMetrics(): Promise<DashboardMetricsResponse> {
+  const res = await fetch(`${BASE}/api/admin/dashboard/metrics`, {
+    headers: { ...authHeaders() },
+  });
+  if (!res.ok) throw new Error(`fetchDashboardMetrics ${res.status}`);
+  return res.json() as Promise<DashboardMetricsResponse>;
+}
+
+export async function refreshDashboardMetrics(): Promise<DashboardMetricsResponse> {
+  const res = await fetch(`${BASE}/api/admin/dashboard/refresh`, {
+    method: 'POST',
+    headers: { ...authHeaders() },
+  });
+  if (!res.ok) throw new Error(`refreshDashboardMetrics ${res.status}`);
+  return res.json() as Promise<DashboardMetricsResponse>;
+}
