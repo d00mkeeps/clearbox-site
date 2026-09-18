@@ -82,6 +82,9 @@ if (typeof window !== 'undefined') {
   Highcharts.setOptions(clearBoxDarkTheme);
 }
 
+const HighchartsReactComponent: any =
+  (HighchartsReact as any)?.default ?? HighchartsReact;
+
 export default function HighchartsWrapper(props: HighchartsReact.Props) {
   const [mounted, setMounted] = useState(false);
 
@@ -97,5 +100,6 @@ export default function HighchartsWrapper(props: HighchartsReact.Props) {
     );
   }
 
-  return <HighchartsReact highcharts={Highcharts} {...props} />;
+  return <HighchartsReactComponent highcharts={Highcharts} {...props} />;
 }
+

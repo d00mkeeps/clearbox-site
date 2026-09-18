@@ -32,7 +32,7 @@ export async function adminLogin(
   password: string,
 ): Promise<{ ok: boolean; username: string }> {
   const base =
-    import.meta.env.VITE_API_URL ?? 'https://clearbox-api.mileshillary.com';
+    import.meta.env.VITE_API_URL ?? '';
   const res = await fetch(`${base}/api/auth/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -50,7 +50,7 @@ export async function adminMe(
   password: string,
 ): Promise<{ username: string }> {
   const base =
-    import.meta.env.VITE_API_URL ?? 'https://clearbox-api.mileshillary.com';
+    import.meta.env.VITE_API_URL ?? '';
   const res = await fetch(`${base}/api/auth/me`, {
     headers: { Authorization: btoaAuth(username, password) },
   });

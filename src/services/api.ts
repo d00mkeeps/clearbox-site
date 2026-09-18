@@ -6,7 +6,7 @@ import type {
 } from '../types/telemetry';
 
 const BASE =
-  import.meta.env.VITE_API_URL ?? 'https://clearbox-api.mileshillary.com';
+  import.meta.env.VITE_API_URL ?? '';
 
 const CREDS_KEY = '***';
 
